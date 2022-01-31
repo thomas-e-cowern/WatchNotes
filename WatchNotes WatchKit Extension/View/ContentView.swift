@@ -6,7 +6,13 @@
 //
 
 import SwiftUI
+// MARK:  Properties
+@State private var notes: [Note] = []
+@State private var text: String = ""
 
+// MARK: Function
+
+// MARK: Body
 struct ContentView: View {
     var body: some View {
         Text("Hello, World!")
@@ -14,6 +20,7 @@ struct ContentView: View {
     }
 }
 
+// MARK:  Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
