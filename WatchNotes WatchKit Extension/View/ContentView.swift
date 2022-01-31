@@ -22,13 +22,23 @@ struct ContentView: View {
                 TextField("Add New Note", text: $text)
                 
                 Button {
-                    // Action
+                    // Run button action when text is not empty
+                    // Create a note itme and initialize it with text value
+                    // Add a new note to the notes array (append)
+                    // Save the notes array (Funtcion)
                     
                 } label: {
-                    Image(systemName: "plus")
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 42, weight: .semibold))
                 }
+                .fixedSize()
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(.accentColor)
+
             }// End of HStack
-        } //: VStack
+            
+            Spacer()
+        }// End of VStack
         .navigationTitle("Notes")
     }
 }
