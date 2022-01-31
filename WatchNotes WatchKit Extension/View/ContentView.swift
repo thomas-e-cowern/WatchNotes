@@ -22,9 +22,10 @@ struct ContentView: View {
     
     func save() {
 //        dump(notes)
+        print("In save function")
         do {
             // convert the notes array to data using JSONEncoder
-            let data = try JSONEncoder().encode("notes")
+            let data = try JSONEncoder().encode(notes)
             
             // create a new url to save the file using the getDocumentDirectory
             let url = getDocumentDirectory().appendingPathComponent("notes")
@@ -38,18 +39,29 @@ struct ContentView: View {
     }
     
     func load() {
-        do {
-            // get the notes url path
-            let url = getDocumentDirectory().appendingPathComponent("notes")
-            
-            // create a new property for the data
-            let data = try Data(contentsOf: url)
-            
-            // decode data and assign value to property
-            notes = try JSONDecoder().decode([Note].self, from: data)
-            
-        } catch {
-            // Do nothing if no data available
+        print("In load function")
+        DispatchQueue.main.async {
+            do {
+                // get the notes url path
+                let url = getDocumentDirectory().appendingPathComponent("notes")
+                
+                // create a new property for the data
+                let data = try Data(contentsOf: url)
+                
+                // decode data and assign value to property
+                notes = try JSONDecoder().decode([Note].self, from: data)
+                
+            } catch {
+                // Do nothing if no data available
+                print("failure in load")
+            }
+        }
+    }
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
         }
     }
     
@@ -87,9 +99,30 @@ struct ContentView: View {
             
             Spacer()
             
-            Text("\(notes.count)")
+            if notes.count >= 1 {
+                List {
+                    ForEach(0..<notes.count, id:\.self) { i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                        }// End of HStack
+                    }// End of ForEach
+                    .onDelete(perform: delete)
+                }// End of list
+            } else {
+                Spacer()
+                Image(systemName: "note.text")
+                Spacer()
+            }// End of if
         }// End of VStack
         .navigationTitle("Notes")
+        .onAppear(perform: {
+            load()
+        })
     }
 }
 
