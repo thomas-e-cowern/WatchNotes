@@ -6,17 +6,22 @@
 //
 
 import SwiftUI
-// MARK:  Properties
-@State private var notes: [Note] = []
-@State private var text: String = ""
 
-// MARK: Function
-
-// MARK: Body
 struct ContentView: View {
+    // MARK:  Properties
+    @State private var notes: [Note] = [Note]()
+    @State private var text: String = ""
+
+
+    // MARK: Function
+
+    // MARK: Body
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            Text("Hello, World!")
+                .padding()
+        } //: VStack
+        .navigationTitle("Notes")
     }
 }
 
