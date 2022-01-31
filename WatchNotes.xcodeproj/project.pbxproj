@@ -17,6 +17,7 @@
 		41A03E8527A8325F00CEE474 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A03E8427A8325F00CEE474 /* Preview Assets.xcassets */; };
 		41A03E9727A8474800CEE474 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A03E9627A8474800CEE474 /* Note.swift */; };
 		41A03E9927A8673900CEE474 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A03E9827A8673900CEE474 /* DetailView.swift */; };
+		41A03E9B27A870C500CEE474 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A03E9A27A870C500CEE474 /* CreditsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		41A03E8627A8325F00CEE474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41A03E9627A8474800CEE474 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		41A03E9827A8673900CEE474 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		41A03E9A27A870C500CEE474 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				41A03E7B27A8325B00CEE474 /* ContentView.swift */,
 				41A03E9827A8673900CEE474 /* DetailView.swift */,
+				41A03E9A27A870C500CEE474 /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				41A03E7C27A8325B00CEE474 /* ContentView.swift in Sources */,
 				41A03E7E27A8325B00CEE474 /* WatchNotesApp.swift in Sources */,
 				41A03E8027A8325B00CEE474 /* ComplicationController.swift in Sources */,
+				41A03E9B27A870C500CEE474 /* CreditsView.swift in Sources */,
 				41A03E9927A8673900CEE474 /* DetailView.swift in Sources */,
 				41A03E9727A8474800CEE474 /* Note.swift in Sources */,
 			);
