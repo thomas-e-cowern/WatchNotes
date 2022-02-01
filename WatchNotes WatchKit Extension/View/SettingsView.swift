@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-struct Settings: View {
+struct SettingsView: View {
     
     // MARK:  Properties
     @AppStorage("lineCount") var lineCount: Int = 1
     @State private var value: Float = 1.0
+    
+    // MARK: Functions
+    func update() {
+        lineCount = Int(value)
+    }
     
     // MARK:  Body
     var body: some View {
@@ -24,7 +29,12 @@ struct Settings: View {
                 .fontWeight(.bold)
             
             // Slider
-            Slider(value: $value, in: 1...4, step: 1)
+            Slider(value: Binding(get: {
+                self.value
+            }, set: {(newValue) in
+                self.value = newValue
+                self.update()
+            }), in: 1...4, step: 1)
                 .accentColor(.accentColor)
             
         }// End of VStack
@@ -34,6 +44,6 @@ struct Settings: View {
 // MARK:  Preview
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
-        Settings()
+        SettingsView()
     }
 }
