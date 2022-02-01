@@ -39,7 +39,7 @@ struct ContentView: View {
     }
     
     func load() {
-        print("In load function")
+
         DispatchQueue.main.async {
             do {
                 // get the notes url path

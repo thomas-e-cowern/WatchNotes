@@ -19,6 +19,7 @@
 		41A03E9927A8673900CEE474 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A03E9827A8673900CEE474 /* DetailView.swift */; };
 		41A03E9B27A870C500CEE474 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A03E9A27A870C500CEE474 /* CreditsView.swift */; };
 		41D59F8D27A9D03E001D9331 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D59F8C27A9D03E001D9331 /* HeaderView.swift */; };
+		41D59F8F27A9DEB9001D9331 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D59F8E27A9DEB8001D9331 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		41A03E9827A8673900CEE474 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		41A03E9A27A870C500CEE474 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		41D59F8C27A9D03E001D9331 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		41D59F8E27A9DEB8001D9331 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				41A03E7B27A8325B00CEE474 /* ContentView.swift */,
 				41A03E9827A8673900CEE474 /* DetailView.swift */,
 				41A03E9A27A870C500CEE474 /* CreditsView.swift */,
+				41D59F8E27A9DEB8001D9331 /* Settings.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				41A03E7C27A8325B00CEE474 /* ContentView.swift in Sources */,
 				41A03E7E27A8325B00CEE474 /* WatchNotesApp.swift in Sources */,
+				41D59F8F27A9DEB9001D9331 /* Settings.swift in Sources */,
 				41A03E8027A8325B00CEE474 /* ComplicationController.swift in Sources */,
 				41A03E9B27A870C500CEE474 /* CreditsView.swift in Sources */,
 				41A03E9927A8673900CEE474 /* DetailView.swift in Sources */,
