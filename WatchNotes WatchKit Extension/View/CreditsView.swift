@@ -14,6 +14,10 @@ struct CreditsView: View {
     var body: some View {
         VStack(spacing: 3) {
             // Profile Image
+            Image("Developer_TC")
+                .resizable()
+                .scaledToFit()
+                .layoutPriority(1)
             
             // Header
             HeaderView(title: "Credits")
