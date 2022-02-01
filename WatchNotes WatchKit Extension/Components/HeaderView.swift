@@ -10,15 +10,20 @@ import SwiftUI
 struct HeaderView: View {
     
     // MARK:  Properties
+    var title: String = ""
     
     // MARK:  Body
     var body: some View {
-        // Title
         
+        // Title
+        if title != "" {
+            Text(title.uppercased())
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.accentColor)
+        }
         
         // Seperator
-        
-        
         ZStack {
             HStack {
                 Capsule()
@@ -38,6 +43,10 @@ struct HeaderView: View {
 // MARK:  Preview
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        Group {
+            HeaderView()
+            
+            HeaderView(title: "Credits")
+        }
     }
 }

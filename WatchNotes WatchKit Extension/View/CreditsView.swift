@@ -14,8 +14,20 @@ struct CreditsView: View {
     var body: some View {
         VStack(spacing: 3) {
             // Profile Image
+            
             // Header
+            HeaderView(title: "Credits")
+            
             // Content
+            Text("Thomas Cowern")
+                .foregroundColor(.primary)
+                .fontWeight(.bold)
+            
+            Text("Developer")
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .fontWeight(.light)
+            
         }// End of VStack
     }
 }
