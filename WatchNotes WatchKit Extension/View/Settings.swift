@@ -24,7 +24,8 @@ struct Settings: View {
                 .fontWeight(.bold)
             
             // Slider
-            
+            Slider(value: $value, in: 1...4, step: 1)
+                .accentColor(.accentColor)
             
         }// End of VStack
     }
